@@ -22,18 +22,8 @@ public class Teacher extends Person{
 		this.klass = klass;
 	}
 	
-	public String introduce() {
-		String fieldname = "klass";
-		Field[] fields = this.getClass().getDeclaredFields();
-		boolean isKlassExist = false;
-		for (int i = 0; i < fields.length; i++) {
-			if (fields[i].getName().equals(fieldname)) {
-				isKlassExist = true;
-				break;
-			}
-		}
-		
-		if (isKlassExist) {
+	public String introduce() {		
+		if (this.getKlass() > 0) {
 			return super.introduce() + " I am a Teacher. I teach Class " + klass + ".";
 		} else {
 			return super.introduce() + " I am a Teacher. I teach No Class.";
