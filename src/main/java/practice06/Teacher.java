@@ -1,7 +1,5 @@
 package practice06;
 
-import java.lang.reflect.Field;
-
 public class Teacher extends Person{
 	private int klass;
 
